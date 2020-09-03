@@ -1,0 +1,7 @@
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\Tasks.exe.config
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\Tasks.exe
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\Tasks.pdb
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.csprojAssemblyReference.cache
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.exe
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.pdb
