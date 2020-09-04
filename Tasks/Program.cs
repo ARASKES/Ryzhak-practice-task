@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Tasks.Task_classes;
 using InterfaceLib; //  Мой DLL-файл, подключен для вызова удобного интерфейса
 
@@ -6,7 +7,7 @@ namespace Tasks
 {
   class Program
   {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
       Console.Title = "Pair tasks";
 
@@ -34,13 +35,13 @@ namespace Tasks
             Task2_FileStream.Execute();
             break;
           case "5":
-            //Task3_JSON.Execute();
+            await Task3_JSON.Execute();
             break;
           case "6":
-            //Task4_XML.Execute();
+            Task4_XML.Execute();
             break;
           case "7":
-            //Task5_ZIP.Execute();
+            Task5_ZIP.Execute();
             break;
           case "exit":
             Environment.Exit(0);

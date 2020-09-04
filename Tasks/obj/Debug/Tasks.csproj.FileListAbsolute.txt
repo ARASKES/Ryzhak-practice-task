@@ -8,3 +8,12 @@ C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.pdb
 C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\InterfaceLib.dll
 C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\InterfaceLib.pdb
 C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.csproj.CopyComplete
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Text.Json.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Memory.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.exe.config
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\System.Buffers.dll
