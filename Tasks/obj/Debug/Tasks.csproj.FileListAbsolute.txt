@@ -5,3 +5,6 @@ C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.cspr
 C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.csproj.CoreCompileInputs.cache
 C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.exe
 C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.pdb
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\InterfaceLib.dll
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\bin\Debug\InterfaceLib.pdb
+C:\Users\Andrey\Documents\GitHub\Ryzhak-practice-task\Tasks\obj\Debug\Tasks.csproj.CopyComplete

@@ -8,7 +8,7 @@ namespace Tasks.Task_classes
   {
     public static void Execute()
     {
-      string path = @"D:\sampleDir";	//Адрес создаваемой директории (при необходимости можно изменить)
+      string path = @"D:\sampleDir";	//  Адрес создаваемой директории (при необходимости можно изменить)
 
       Directory.CreateDirectory(path);
 
