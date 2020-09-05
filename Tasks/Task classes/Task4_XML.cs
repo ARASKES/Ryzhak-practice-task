@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml;
+using System.Xml.Linq;
+using System.IO;
+using System.Xml.Schema;
 
 namespace Tasks.Task_classes
 {
@@ -14,20 +16,45 @@ namespace Tasks.Task_classes
     }
     public static void Execute()
     {
-      PlayerData player1 = new PlayerData
+      string xmlPath = @"D:\playerData.xml";  //  Адрес хранения будущего XML-файла
+
+      List<PlayerData> players = new List<PlayerData>();  //  Создаем список объектов типа PlayerData
+      players.Add(new PlayerData { Name = "P1", Health = 100, Damage = 20 });
+      players.Add(new PlayerData { Name = "P2", Health = 80, Damage = 25 });
+      players.Add(new PlayerData { Name = "P3", Health = 120, Damage = 11 });
+
+      XDocument xDoc = new XDocument(new XElement("players"));  //  Добавляем корневой элемент players
+      foreach (PlayerData player in players)  //  Добавляем данные каждого объекта из списка в XML
       {
-        Name = "P1", Health = 100, Damage = 20
-      };
-      PlayerData player2 = new PlayerData
+        xDoc.Root.Add(new XElement("player", 
+          new XAttribute("name", player.Name), new XElement("health", player.Health), new XElement("damage", player.Damage)));
+      }
+      xDoc.Save(xmlPath);
+
+      Console.WriteLine($"An XML file was generated at {xmlPath}!");
+
+      foreach (XElement playerElement in xDoc.Root.Elements("player"))
       {
-        Name = "P2", Health = 80, Damage = 25
-      };
+        XAttribute nameAttribute = playerElement.Attribute("name");
+        XElement healthElement = playerElement.Element("health");
+        XElement damageElement = playerElement.Element("damage");
 
-      List<PlayerData> players = new List<PlayerData>();
-      players.Add(player1);
-      players.Add(player2);
+        if (nameAttribute != null && healthElement != null && damageElement != null)
+        {
+          Console.WriteLine($"{nameAttribute}");
+          Console.WriteLine($"\t{healthElement}");
+          Console.WriteLine($"\t{damageElement}");
+        }
 
+        Console.WriteLine();
+      }
 
+      Console.WriteLine("\nPress any key to procceed and delete created .xml file...\n");
+      Console.ReadKey();
+
+      File.Delete(xmlPath);
+
+      Console.WriteLine("Created files deleted successfully!\n");
     }
   }
 }

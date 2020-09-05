@@ -43,6 +43,8 @@ namespace Tasks.Task_classes
       Console.ReadKey();
 
       File.Delete(jsonLocation);
+
+      Console.WriteLine("Created files deleted successfully!\n");
     }
   }
 }
