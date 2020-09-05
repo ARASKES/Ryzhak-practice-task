@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task classes\AdditionalTask_Threads.cs" />
     <Compile Include="Task classes\Task1\Task1_Directories.cs" />
     <Compile Include="Task classes\Task1\Task1_Drives.cs" />
     <Compile Include="Task classes\Task1\Task1_Files.cs" />

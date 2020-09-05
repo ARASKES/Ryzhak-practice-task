@@ -16,7 +16,7 @@ namespace Tasks
         Console.Clear();
 
         Console.WriteLine("Choose the task:");
-        Lib.CallInterface("Task 1. Drives", "Task 1. Directories", "Task 1. Files", "Task 2. FileStream", "Task 3. JSON", "Task 4. XML", "Task 5. ZIP");
+        Lib.CallInterface("Task 1. Drives", "Task 1. Directories", "Task 1. Files", "Task 2. FileStream", "Task 3. JSON", "Task 4. XML", "Task 5. ZIP", "Additional task. Threads");
 
         string input = Console.ReadLine();
         Console.Clear();
@@ -42,6 +42,9 @@ namespace Tasks
             break;
           case "7":
             Task5_ZIP.Execute();
+            break;
+          case "8":
+            await AdditionalTask_Threads.Execute();
             break;
           case "exit":
             Environment.Exit(0);
