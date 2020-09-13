@@ -13,9 +13,6 @@ namespace Tasks.Task_classes
   {
     public static void Execute()
     {
-      CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-      CancellationToken cancellationToken = cancellationTokenSource.Token;
-
       string[] hashCodes = {
         "1115dd800feaacefdf481f1f9070374a2a81e27880f187396db67958b207cbad", 
         "3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b", 
@@ -102,8 +99,8 @@ namespace Tasks.Task_classes
       bool[] breakers;
       bool isFound = false;
 
-      CancellationTokenSource internalTokenSource = new CancellationTokenSource();
-      CancellationToken internalCancellationToken = internalTokenSource.Token;
+      CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+      CancellationToken cancellationToken = cancellationTokenSource.Token;
 
       List<char[]> groups = new List<char[]>();
       List<char> exitChars = new List<char>();
@@ -134,7 +131,7 @@ namespace Tasks.Task_classes
       for (int t = 0; t < tasks.Length; t++)
       {
         int taskIndex = t;
-        tasks[taskIndex] = Task.Run(() => WordIterate(0, groups[taskIndex], hashToDecypher, exitChars[taskIndex], internalCancellationToken, ref breakers[taskIndex], ref isFound));
+        tasks[taskIndex] = Task.Run(() => WordIterate(0, groups[taskIndex], hashToDecypher, exitChars[taskIndex], cancellationToken, ref breakers[taskIndex], ref isFound));
       }
 
       await Task.Run(() =>
@@ -148,7 +145,7 @@ namespace Tasks.Task_classes
         }
       });
 
-      internalTokenSource.Cancel();
+      cancellationTokenSource.Cancel();
 
       string password = string.Empty;
       foreach (var item in groups)
