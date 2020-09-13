@@ -44,7 +44,7 @@ namespace Tasks
             Task5_ZIP.Execute();
             break;
           case "8":
-            await AdditionalTask_Threads.Execute();
+            AdditionalTask_AsyncHash.Execute();
             break;
           case "exit":
             Environment.Exit(0);
