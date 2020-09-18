@@ -33,6 +33,9 @@ namespace Tasks.Task_classes
         Console.WriteLine($"\nFile text: {outputText}");
       }
 
+      Console.WriteLine("\nPress any key to procceed and delete created files and directories...\n");
+      Console.ReadKey();
+
       fStream.Dispose();
       File.Delete(path + @"\sampleFile.txt");
       Directory.Delete(path);

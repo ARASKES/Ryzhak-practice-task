@@ -50,11 +50,14 @@ namespace Tasks
             Environment.Exit(0);
             break;
           default:
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Wrong input received, try again!\n");
+            Console.ForegroundColor = ConsoleColor.Gray;
             break;
         }
         Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.Write("Press any key to continue...");
+        Console.Write("\nPress any key to continue...");
         Console.ForegroundColor = ConsoleColor.Gray;
         Console.ReadKey();
       }

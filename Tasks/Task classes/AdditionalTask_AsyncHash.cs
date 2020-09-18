@@ -6,6 +6,7 @@ using InterfaceLib; //  Мой DLL-файл, подключен для вызо�
 using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 namespace Tasks.Task_classes
 {
@@ -36,9 +37,19 @@ namespace Tasks.Task_classes
             Console.Write("\nEnter the amount of threads (1 - 4): ");
             int threadsCount = Convert.ToInt32(Console.ReadLine());
 
+            Console.WriteLine($"\nChosen hash: {hashCodes[Convert.ToInt32(input) - 1]}\nParallel threads amount: {threadsCount}");
             Console.WriteLine("\nThe chosen hash is being deciphered, please stand by...\n");
 
-            Console.Write($"The password is: {BruteForceAsync(hashCodes[Convert.ToInt32(input) - 1], threadsCount).Result}");
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Console.WriteLine($"The password is: {BruteForceAsync(hashCodes[Convert.ToInt32(input) - 1], threadsCount).Result}");
+            stopwatch.Stop();
+            Console.WriteLine($"Time elapsed: {stopwatch.ElapsedMilliseconds} ms");
+            stopwatch.Reset();
+
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.Write("Press any key to continue...");
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.ReadKey();
             break;
           case "exit":
@@ -46,7 +57,10 @@ namespace Tasks.Task_classes
             Console.WriteLine();
             break;
           default:
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Wrong input received, try again!\n");
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.ReadKey();
             break;
         }
