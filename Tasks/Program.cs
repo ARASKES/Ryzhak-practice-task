@@ -53,12 +53,12 @@ namespace Tasks
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Wrong input received, try again!\n");
-            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.ResetColor();
             break;
         }
         Console.ForegroundColor = ConsoleColor.DarkGray;
         Console.Write("\nPress any key to continue...");
-        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.ResetColor();
         Console.ReadKey();
       }
     }
